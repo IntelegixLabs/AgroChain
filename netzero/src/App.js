@@ -1,13 +1,16 @@
 import { Routes, Route, Link } from "react-router-dom";
+import Header  from "./Header";
+import Farmersmain from "./farmer"
 
 function App() {
   return (
     <div className="App">
-     this is sample code
-     <Routes>
+      <Header />
+      <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
+        <Route path="/farmerlanding" element={<Farmersmain prhat_balance = '600' curr_user_name =' Gajanan' user={{balance: 5000, address: 'anancdl'}} />} />
       </Routes>
+
     </div>
   );
 }
@@ -20,7 +23,7 @@ function Home() {
         <p>You can do this, I believe in you.</p>
       </main>
       <nav>
-        <Link to="/about">About</Link>
+        <Link to="/farmerlanding">About</Link>
       </nav>
     </>
   );

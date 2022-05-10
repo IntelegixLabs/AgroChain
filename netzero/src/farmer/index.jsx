@@ -1,5 +1,7 @@
 import react from 'react'
 import Buytoken from './Buytokens'
+import Send from './Send'
+import Swap from './Swap'
 
 class Farmersmain extends react.Component {
     constructor(props) {
@@ -86,6 +88,8 @@ class Farmersmain extends react.Component {
                     </div>
                 </div>
                 <Buytoken />
+                <Send />
+                <Swap />
             </div>
         )
     }

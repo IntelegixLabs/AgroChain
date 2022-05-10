@@ -18,7 +18,7 @@ class Header extends react.Component {
           <div className="collapse navbar-collapse justify-content-end text-center" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-              <a routerLink="/user-dashboard" class="nav-link" href="#">Dashboard</a>
+              <a routerLink="/user-dashboard" className="nav-link" href="#">Dashboard</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">editprofile</a>

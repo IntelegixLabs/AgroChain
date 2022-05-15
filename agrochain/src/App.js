@@ -12,8 +12,8 @@ import { useEffect, useState } from 'react'
 import { ethers } from "ethers"
 import { Spinner } from 'react-bootstrap'
 
-import Navigation from "./Components/Navigation";
-import { Footer } from "./Components/Footer";
+import Header from "./Components/common/header";
+import { Footer } from "./Components/common/Footer";
 import { NFT } from "./Components/NFT";
 import { NFTDetails } from "./Components/NFTDetails";
 import Profile from "./Components/Profile";
@@ -69,7 +69,7 @@ function App() {
     }
     return (
     <>
-    <Navigation web3Handler={web3Handler} account={account} />
+    <Header web3Handler={web3Handler} account={account} />
     <Routes>
       <Route path="/" element={<Loading />} />
       <Route path="/profile" element={<Profile marketplace={marketplace} nft={nft} account={account} balance={balance} />} />

@@ -19,8 +19,10 @@ import { NFTDetails } from "./Components/NFTDetails";
 import Profile from "./Components/Profile";
 import { Register } from "./Components/Register";
 import { Loading } from "./Components/Loading";
+import Home from "./Components/home/Home"
 
 import './App.css';
+import './main.css'
 
 
 const RpcHttpUrl = "https://mainnet.infura.io/v3/9f37c36eaea34b42a0bce7936c691b67";
@@ -71,7 +73,7 @@ function App() {
     <>
     <Header web3Handler={web3Handler} account={account} />
     <Routes>
-      <Route path="/" element={<Loading />} />
+      <Route path="/" element={<Home />} />
       <Route path="/profile" element={<Profile marketplace={marketplace} nft={nft} account={account} balance={balance} />} />
       <Route path="nft" element={<NFT marketplace={marketplace} nft={nft} account={account} balance={balance} />} />
       <Route path="nft-details" element={<NFTDetails marketplace={marketplace} />} />

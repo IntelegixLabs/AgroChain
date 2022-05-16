@@ -13,8 +13,8 @@ export default function Home(props) {
                                     <p className="home__text">Digital marketplace for crypto collectibles and non-fungible tokens.<br/>Buy, sell, and discover exclusive digital assets.</p>
 
                                     <div className="home__btns">
-                                        <a href="explore.html" className="home__btn home__btn--clr">Explore</a>
-                                        <a href="signin.html" className="home__btn">Create</a>
+                                        <a href="explore" className="home__btn home__btn--clr">Explore</a>
+                                        <a href="signin" className="home__btn">Create</a>
                                     </div>
                                 </div>
                             </div>

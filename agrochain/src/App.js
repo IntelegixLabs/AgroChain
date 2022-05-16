@@ -1,8 +1,4 @@
-import {
-    BrowserRouter,
-    Routes,
-    Route
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MarketplaceAbi from './frontend/contractsData/Marketplace.json'
 import MarketplaceAddress from './frontend/contractsData/Marketplace-address.json'
@@ -20,6 +16,7 @@ import Profile from "./Components/Profile";
 import { Register } from "./Components/Register";
 import { Loading } from "./Components/Loading";
 import Home from "./Components/home/Home"
+import Signin from "./Components/signin/"
 
 import './App.css';
 import './main.css'
@@ -58,7 +55,7 @@ function App() {
             setAccount(accounts[0])
             await web3Handler()
         })
-        
+
         loadContracts(signer)
     }
     const loadContracts = async (signer) => {
@@ -70,20 +67,20 @@ function App() {
         setLoading(false)
     }
     return (
-    <>
-    <Header web3Handler={web3Handler} account={account} />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/profile" element={<Profile marketplace={marketplace} nft={nft} account={account} balance={balance} />} />
-      <Route path="nft" element={<NFT marketplace={marketplace} nft={nft} account={account} balance={balance} />} />
-      <Route path="nft-details" element={<NFTDetails marketplace={marketplace} />} />
-      <Route path="signup" element={<Register />} />
-      <Route path="*" element={<NFT />} />
-    </Routes>
-    <Footer />
-        
-    </>
-  );
+        <>
+            <Header web3Handler={web3Handler} account={account} />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/profile" element={<Profile marketplace={marketplace} nft={nft} account={account} balance={balance} />} />
+                <Route path="nft" element={<NFT marketplace={marketplace} nft={nft} account={account} balance={balance} />} />
+                <Route path="nft-details" element={<NFTDetails marketplace={marketplace} />} />
+                <Route path="signup" element={<Register />} />
+                <Route path="signin" element={<Signin web3Handler={web3Handler} account={account} /> }/>
+                 <Route path="*" element={<NFT />} />
+            </Routes>
+            <Footer />
+        </>
+    );
 }
 
 export default App;

@@ -24,10 +24,10 @@ const Header = ({ web3Handler, account }) => {
                     <ul className="header__nav">
 
                         <li className="header__nav-item">
-                            <a className="header__nav-link" href="/index" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+                            <a className="header__nav-link" href="/" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
                         </li>
                         <li className="header__nav-item">
-                            <a className="header__nav-link" href="/login" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sign in</a>
+                            <a className="header__nav-link" href="/signin" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sign in</a>
                         </li>
                         <li className="header__nav-item">
                             <a className="header__nav-link" href="/signup" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sign Up</a>
@@ -44,7 +44,7 @@ const Header = ({ web3Handler, account }) => {
                     </div>
 
                     <div className="header__action header__action--signin">
-                        <a className="header__action-btn header__action-btn--signin" href="signin.html">
+                        <a className="header__action-btn header__action-btn--signin" href="signin">
                             <span>Sign in</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,12a1,1,0,0,0-1-1H11.41l2.3-2.29a1,1,0,1,0-1.42-1.42l-4,4a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l4,4a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L11.41,13H19A1,1,0,0,0,20,12ZM17,2H7A3,3,0,0,0,4,5V19a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V16a1,1,0,0,0-2,0v3a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V5A1,1,0,0,1,7,4H17a1,1,0,0,1,1,1V8a1,1,0,0,0,2,0V5A3,3,0,0,0,17,2Z" /></svg>
                         </a>

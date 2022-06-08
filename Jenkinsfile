@@ -36,8 +36,8 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                sh "sudo rm -rf /var/www/agrochain"
-                sh "sudo cp -r ${WORKSPACE}/agrochain/build/ /var/www/agrochain"
+                sh "rm -rf /var/www/agrochain"
+                sh "cp -r ${WORKSPACE}/agrochain/build/ /var/www/agrochain"
             }
         }
     }

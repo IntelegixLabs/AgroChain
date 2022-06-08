@@ -11,7 +11,12 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                sh 'npm install'
+                sh "pwd"
+                dir('agrochain') {
+                    sh "pwd"
+                }
+                sh "pwd"
+                sh 'node -v'
             }
         }
     }

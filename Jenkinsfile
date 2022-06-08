@@ -11,11 +11,6 @@ pipeline {
     stages {
         stage('Initial') {
             steps {
-                sh "pwd"
-                dir('agrochain') {
-                    sh "pwd"
-                }
-                sh "pwd"
                 sh 'node -v'
             }
         }
@@ -25,6 +20,16 @@ pipeline {
                 dir('agrochain') {
                     sh "pwd"
                     sh 'npm install'
+                }
+                sh "pwd"
+            }
+        }
+        stage('Build') {
+            steps {
+                sh "pwd"
+                dir('agrochain') {
+                    sh "pwd"
+                    sh 'npm run build'
                 }
                 sh "pwd"
             }

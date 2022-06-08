@@ -24,9 +24,9 @@ pipeline {
                 sh "pwd"
                 dir('agrochain') {
                     sh "pwd"
+                    sh 'npm install'
                 }
                 sh "pwd"
-                sh 'npm install'
             }
         }
     }

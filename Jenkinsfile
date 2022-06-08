@@ -9,7 +9,7 @@ pipeline {
         CI = 'true'
     }
     stages {
-        stage('Install') {
+        stage('Initial') {
             steps {
                 sh "pwd"
                 dir('agrochain') {
@@ -17,6 +17,16 @@ pipeline {
                 }
                 sh "pwd"
                 sh 'node -v'
+            }
+        }
+        stage('Install') {
+            steps {
+                sh "pwd"
+                dir('agrochain') {
+                    sh "pwd"
+                }
+                sh "pwd"
+                sh 'npm install'
             }
         }
     }

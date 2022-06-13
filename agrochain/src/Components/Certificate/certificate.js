@@ -1,7 +1,7 @@
 import React from 'react'
 import jsPDF from 'jspdf';
 import  './certificate.css';
-const certificate = () => {
+export const Certificate = () => {
   const downloadPdf=()=>{
    var doc=new jsPDF('l','pt','a4');
    doc.html(document.querySelector("#container"),{
@@ -46,4 +46,4 @@ return (
 )
 }
 
-export default certificate
+/*export default Certificate*/
